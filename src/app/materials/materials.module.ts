@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatAutocompleteModule,
+import {
+  MatAutocompleteModule,
   MatCheckboxModule,
   MatDatepickerModule,
   MatFormFieldModule,
