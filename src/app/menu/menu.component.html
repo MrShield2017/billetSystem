@@ -1,0 +1,28 @@
+<div >
+  <mat-toolbar color="warn">
+    <span>Forside</span>
+    <span class="menu"> </span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button>Kontakt os </a>
+      <a mat-button>Handelsbetingelser</a>
+      <a mat-button>Mine oplysninger</a>
+      <a mat-button>Vis indkøbskurv</a>
+    </div>
+    <div fxShow="true" fxHide.gt-sm="true">
+      <a href="#" (click)="sideNav(start)">Show Side Menu</a>
+    </div>
+  </mat-toolbar>
+  
+  <div style="height: 50vh; background-color:transparent">
+    <mat-sidenav-container fxFlexFill class="sideNav">
+      <mat-sidenav #start fxLayout="column" mode="side" opened="false" position="end">
+        <div fxLayout="column">
+          <a mat-button>Kontakt os </a>
+          <a mat-button>Handelsbetingelser</a>
+          <a mat-button>Mine oplysninger</a>
+          <a mat-button>Vis indkøbskurv</a>
+        </div>
+      </mat-sidenav>
+    </mat-sidenav-container>
+  </div>
+</div>

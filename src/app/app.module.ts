@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MaterialsModule } from './materials/materials.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-
+import { MenuComponent } from './menu/menu.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +23,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     HttpClientModule,
     MaterialsModule,
     ReactiveFormsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

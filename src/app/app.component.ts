@@ -20,11 +20,7 @@ export class AppComponent {
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
-
-  getImage()
-  {
-    return "https://www.krak.dk/f/t%C3%B8jhuset:66411164/7000-fredericia";
-  }
+  
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
