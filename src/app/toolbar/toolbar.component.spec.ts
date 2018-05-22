@@ -22,4 +22,10 @@ describe('ToolbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should create mat-card', () => {
+    const fixture = TestBed.createComponent(ToolbarComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('mat-card'));
+  });
 });
