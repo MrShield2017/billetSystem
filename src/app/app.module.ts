@@ -9,12 +9,17 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { MenuComponent } from './menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ForestillingerComponent } from './forestillinger/forestillinger.component';
+import localeDk from '@angular/common/locales/da';
+import { registerLocaleData } from '@angular/common';
 
+registerLocaleData(localeDk, "da");
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    MenuComponent
+    MenuComponent,
+    ForestillingerComponent
   ],
   imports: [
     BrowserModule,
