@@ -19,7 +19,6 @@ export class ForestillingerComponent implements OnInit {
   getForestillinger() {
     this.forestillingService.getForestillinger()
       .subscribe(forestillinger => this.forestillinger = forestillinger);
-      console.log(this.forestillinger);
   }
   bestil(f: forestilling) {
     alert("Bestillet billet til " + f.titel);
