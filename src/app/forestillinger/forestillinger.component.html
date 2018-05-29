@@ -1,7 +1,7 @@
 <ul>
   <li *ngFor="let f of forestillinger">
-    <h3>{{f.titel}} med {{f.artist}}</h3>
-    <h4>{{f.dato | date: 'full': '': 'da'}}</h4>
+    <h3>{{f.titel}} med {{f.artist}}</h3><button title="Bestil billet" (click)="bestil(f)">Bestil billet</button>
+    <h4>{{f.dato | date: 'full': '': 'da' | uppercase}}</h4>
     <div>{{f.beskrivelse}}</div>
   </li>
 </ul>
