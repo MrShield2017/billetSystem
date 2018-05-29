@@ -1,6 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ForestillingerComponent } from './forestillinger.component';
+/* import { HttpClientModule } from '@angular/common/http'; */
 
 describe('ForestillingerComponent', () => {
   let component: ForestillingerComponent;
@@ -8,6 +9,10 @@ describe('ForestillingerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        /* HttpClientModule, */
+        HttpClientTestingModule
+      ],
       declarations: [ ForestillingerComponent ]
     })
     .compileComponents();
@@ -19,7 +24,7 @@ describe('ForestillingerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create', async(inject([HttpClientTestingModule], (httpClient: HttpClientTestingModule) => {
     expect(component).toBeTruthy();
-  });
+  })));
 });
