@@ -1,0 +1,10 @@
+<div>
+  <form>
+    <input type="text" class="txt" name="item" placeholder="event navn" [(ngModel)]="event">
+    <input type="text" class="txt" name="item" placeholder="email" [(ngModel)]="mail">
+    <input type="submit" class="btn" value="bestil" (click)="send()">
+  </form>
+  <p>{{mail}}</p>
+  <p>{{event}}</p>
+  <p>{{postData}}</p>
+</div>

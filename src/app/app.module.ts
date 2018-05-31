@@ -12,6 +12,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ForestillingerComponent } from './forestillinger/forestillinger.component';
 import localeDk from '@angular/common/locales/da';
 import { registerLocaleData } from '@angular/common';
+import { BestillingComponent } from './bestilling/bestilling.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { BestillingService } from './bestilling/bestilling.service';
 
 registerLocaleData(localeDk, "da");
 @NgModule({
@@ -19,7 +22,8 @@ registerLocaleData(localeDk, "da");
     AppComponent,
     ToolbarComponent,
     MenuComponent,
-    ForestillingerComponent
+    ForestillingerComponent,
+    BestillingComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +32,10 @@ registerLocaleData(localeDk, "da");
     HttpClientModule,
     MaterialsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [BestillingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

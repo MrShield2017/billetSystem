@@ -21,6 +21,5 @@ export class ForestillingerComponent implements OnInit {
       .subscribe(forestillinger => this.forestillinger = forestillinger);
   }
   bestil(f: forestilling) {
-    alert("Bestillet billet til " + f.titel);
   }
 }
