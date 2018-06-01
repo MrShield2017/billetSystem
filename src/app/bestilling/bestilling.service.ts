@@ -7,13 +7,13 @@ import forstilling from '../forestillinger/Forestilling'
 @Injectable()
 export class BestillingService {
 
-  private url = 'https://notifikationapi.herokuapp.com';
+  private url = 'https://desolate-crag-49389.herokuapp.com/booking';
   public forstillingen: forstilling;
   constructor(private http: HttpClient) { }
 
   postTest(json) {
     const headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-    return this.http.post(this.url + '/api/mail', json, {headers: headers});
+    return this.http.post(this.url, json, {headers: headers});
   }
   valgtForstilling(f){
     this.forstillingen = f;

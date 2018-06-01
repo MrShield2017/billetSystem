@@ -7,14 +7,9 @@ import { BestillingService } from './bestilling.service';
   styleUrls: ['./bestilling.component.css']
 })
 export class BestillingComponent implements OnInit {
-
-private f: forstilling
-
-
   postData: string;
   mail: String = '';
-  event: String = '';
-  date: String = '100';
+  navn: string = '';
   titel: string;
   beskrivelse: string;
   artist: string;
@@ -32,10 +27,19 @@ private f: forstilling
 
   send() {
     const json = JSON.stringify({
-      mail: this.mail,
-      event: this.event,
-      date: this.date
-    });
+      booking: [{
+        price: 123,
+        subject: this.titel,
+        name: this.artist,
+        text: this.beskrivelse,
+        date: this.dato
+        }],
+        user: [{
+        mail: this.mail,
+        name: this.navn
+        }]
+        });
+    }
     this._bs.postTest(json).subscribe(data => this.postData = JSON.stringify(data) );
   }
 }
