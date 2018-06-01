@@ -10,7 +10,7 @@ import { BestillingService } from '../bestilling/bestilling.service';
   styleUrls: ['./forestillinger.component.css']
 })
 export class ForestillingerComponent implements OnInit {
-  private forestillinger: forestilling[];
+  public forestillinger: forestilling[];
 
   constructor(private forestillingService: ForestillingService, private bestillingService: BestillingService) { }
 
