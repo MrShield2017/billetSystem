@@ -4,6 +4,10 @@
     <input type="text" class="txt" name="item" placeholder="email" [(ngModel)]="mail">
     <input type="submit" class="btn" value="bestil" (click)="send()">
   </form>
+  <p>{{titel}}</p>
+  <p>{{artist}}</p>
+  <p>{{beskrivelse}}</p>
+  <p>{{dato | date: 'full': '': 'da' | uppercase}}</p>
   <p>{{mail}}</p>
   <p>{{event}}</p>
   <p>{{postData}}</p>

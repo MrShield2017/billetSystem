@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import forestilling from './Forestilling';
 import { ForestillingService } from './forestilling.service';
+import { BestillingService } from '../bestilling/bestilling.service';
 
 @Component({
   selector: 'app-forestillinger',
@@ -11,7 +12,7 @@ import { ForestillingService } from './forestilling.service';
 export class ForestillingerComponent implements OnInit {
   private forestillinger: forestilling[];
 
-  constructor(private forestillingService: ForestillingService) { }
+  constructor(private forestillingService: ForestillingService, private bestillingService: BestillingService) { }
 
   ngOnInit() {
     this.getForestillinger();
@@ -21,5 +22,6 @@ export class ForestillingerComponent implements OnInit {
       .subscribe(forestillinger => this.forestillinger = forestillinger);
   }
   bestil(f: forestilling) {
+    this.bestillingService.valgtForstilling(f);
   }
 }
