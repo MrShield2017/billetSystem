@@ -9,7 +9,7 @@ import { BestillingService } from './bestilling.service';
 export class BestillingComponent implements OnInit {
   postData: string;
   mail: String = '';
-  navn: string = '';
+  navn: String = '';
   titel: string;
   beskrivelse: string;
   artist: string;
@@ -31,7 +31,8 @@ export class BestillingComponent implements OnInit {
         price: 123,
         subject: this.titel,
         name: this.artist,
-        text: this.beskrivelse
+        text: this.beskrivelse,
+        date: this.dato
         }],
       user: [{
         mail: this.mail,
