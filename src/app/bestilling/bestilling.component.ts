@@ -31,15 +31,13 @@ export class BestillingComponent implements OnInit {
         price: 123,
         subject: this.titel,
         name: this.artist,
-        text: this.beskrivelse,
-        date: this.dato
+        text: this.beskrivelse
         }],
-        user: [{
+      user: [{
         mail: this.mail,
         name: this.navn
         }]
-        });
-    }
+    });
     this._bs.postTest(json).subscribe(data => this.postData = JSON.stringify(data) );
   }
 }
