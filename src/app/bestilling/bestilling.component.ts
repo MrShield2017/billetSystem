@@ -14,7 +14,6 @@ export class BestillingComponent implements OnInit {
   beskrivelse: string;
   artist: string;
   dato: Date;
-  resultat: string;
 
   constructor(private _bs: BestillingService) { }
 
@@ -40,6 +39,6 @@ export class BestillingComponent implements OnInit {
         name: this.navn
         }]
     });
-    this.resultat = this._bs.postTest(json).subscribe(data => this.postData = JSON.stringify(data) );
+    this._bs.postTest(json).subscribe(data => this.postData = JSON.stringify(data) );
   }
 }
